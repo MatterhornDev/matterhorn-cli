@@ -5,7 +5,7 @@ import * as inquirer from 'inquirer'
 import * as shell from 'shelljs'
 
 const init = () => {
-  console.log(
+  shell.echo(
     chalk.green(
       figlet.textSync('Matterhorn CLI', {
         font: 'Slant',
@@ -25,7 +25,7 @@ const getProjectName = (): Promise<{ project_name: string }> => {
 }
 
 const createDirectory = (project_name: string) => {
-  console.log(
+  shell.echo(
     chalk.blueBright(`Creating project directory ${project_name}`)
   )
   if (!shell.test('-d', project_name)) {
@@ -37,7 +37,7 @@ const createDirectory = (project_name: string) => {
 }
 
 const gitClone = (project_name: string) => {
-  console.log(
+  shell.echo(
     chalk.blueBright(`Cloning Matterhorn project into ${project_name}`)
   )
   shell.exec(`git clone https://github.com/Ethan-Arrowood/matterhorn.git ${project_name}`)
@@ -61,7 +61,7 @@ const run = async () => {
   gitClone(project_name)
   replace(project_name)
 
-  console.log(
+  shell.echo(
     chalk.green(`Your project is ready to go! Run \`cd ${project_name}\` then \`npm install\` to get started.`)
   )
 }
