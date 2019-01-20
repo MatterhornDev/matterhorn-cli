@@ -14,6 +14,14 @@ const init = () => {
       })
     )
   )
+  shell.echo(
+    chalk.red(
+      '⚠️  Warning ⚠️',
+      '\nThis project is currently in beta.',
+      '\nIt is not intended for production use.',
+      '\nReport all bugs at: https://github.com/Ethan-Arrowood/matterhorn-cli/issues/new'
+    )
+  )
 }
 
 const getProjectName = (): Promise<{ project_name: string }> => {

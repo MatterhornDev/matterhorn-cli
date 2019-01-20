@@ -1,9 +1,9 @@
 {
   "name": "matterhorn-cli",
   "version": "0.1.1",
-  "description": "CLI to accompany Matterhorn boilerplate project",
+  "description": "CLI to accompany Matterhorn Node.js boilerplate project",
   "bin": {
-    "matterhorn": "bin/index.js"
+    "matterhorn-cli": "bin/index.js"
   },
   "scripts": {
     "build": "tsc --project tsconfig.json",
