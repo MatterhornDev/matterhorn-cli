@@ -10,6 +10,8 @@ If you found a bug, please open an issue 🐞
 npx matterhorn-cli@beta
 ```
 
+Check it out on npm here: https://www.npmjs.com/package/matterhorn-cli/v/beta
+
 ## Contributing
 To run and test this project locally:
 ```bash
