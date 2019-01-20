@@ -1,6 +1,6 @@
 {
   "name": "matterhorn-cli",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CLI to accompany Matterhorn Node.js boilerplate project",
   "bin": {
     "matterhorn-cli": "bin/index.js"
