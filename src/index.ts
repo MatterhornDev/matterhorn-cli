@@ -51,6 +51,12 @@ const gitClone = (project_name: string) => {
   shell.exec(`git clone https://github.com/Ethan-Arrowood/matterhorn.git ${project_name}`)
 }
 
+const removeGitDirFrom = (project_name: string) => {
+  shell.cd(project_name)
+  shell.rm('-rf', '.git')
+  shell.cd('..')
+}
+
 const replace = (project_name: string) => {
   shell.cd(project_name)
   shell.ls('-R').forEach(fileName => {
@@ -67,6 +73,7 @@ const run = async () => {
   const { project_name } = await getProjectName()
   createDirectory(project_name)
   gitClone(project_name)
+  removeGitDirFrom(project_name)
   replace(project_name)
 
   shell.echo(
