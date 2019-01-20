@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import chalk from 'chalk'
 import * as figlet from 'figlet'
 import * as inquirer from 'inquirer'
@@ -81,4 +80,5 @@ const run = async () => {
   )
 }
 
-run()
+export default run
+export { run as matterhorn_cli }
